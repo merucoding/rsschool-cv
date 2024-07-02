@@ -1,7 +1,7 @@
 // Меню бургер
-const burger = document.querySelector('.header_burger');
-const menu = document.querySelector('.nav');
-const links = document.querySelectorAll('.menu_link');
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+const links = document.querySelectorAll('.header__menu-link');
 
 if (burger) {
   burger.addEventListener('click', function (e) {
