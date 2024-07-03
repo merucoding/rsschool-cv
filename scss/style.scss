@@ -1,0 +1,499 @@
+html {
+  scroll-behavior: smooth
+}
+body.lock {
+  overflow: hidden;
+}
+* {
+  font-family: 'Nunito', sans-serif;
+}
+.header {
+  background-color: #f07167;
+  &__menu {
+    padding: 25px;
+  }
+  &__menu-list {
+    margin: 0 4.9%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__menu-link {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 2.2px;
+    transition: 0.3s;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 2px;
+      left: -20px;
+      bottom: 10px;
+      background-color: #fff;
+      transition: width ease-in-out 0.3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::before {
+        width: 10px; 
+      }
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 2px;
+      right: -17px;
+      bottom: 9px;
+      background-color: #fff;
+      transition: width ease-in-out 0.3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::after {
+        width: 10px; 
+      }
+      &:hover {
+        color: #f0f600;
+      }
+    }
+  }
+  &__burger {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.about {
+    padding-top: 45px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  &__avatar {
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+  }
+  &__info {
+    max-width: 560px;
+    & > * {
+      margin-left: 80px;
+    }
+  }
+  &__name {
+    margin-top: 49px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 4.375rem;
+    color: #f07167;
+    margin-left: 64px;
+  }
+  &__sub {
+    margin-top: 10px;
+  }
+}
+.sub {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.title {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   color: #f07167;
+   margin-top: 60px;
+}
+.descr {
+   font-size: 1.125rem;
+   max-width: 26.5em;
+   margin-top: 18px;
+}
+.experience {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 11%;
+  }
+  &__left {
+    padding: 0 10px;
+  }
+  &__title {
+    margin-top: 60px;
+  }
+  &__descr {
+    &:nth-child(5) {
+      margin-top: 7px;
+    }
+  }
+  &__sub {
+    margin-top: 28px;
+  }
+  &__right {
+    padding: 0 10px;
+  }
+  &__list {
+    margin-top: 18px;
+  }
+}
+.list {
+  & li {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+  }
+  & li::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #f07167;
+  }
+}
+.skills {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 11%;
+    margin-top: 60px;
+    row-gap: 60px;
+  }
+  &__title {
+    margin-top: 0;
+  }
+  &__lang {
+    padding: 0 10px;
+    width: 250px;
+  }
+  &__list {
+    margin-top: 18px;
+  }
+  &__code {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 44px;
+    row-gap: 40px;
+  }
+  &__descr {
+    font-weight: bold;
+  }
+  &__code-example {
+    padding: 20px 80px;
+    font-size: 1rem;
+    line-height: 22px;
+    background-color: #cad2c5;
+    opacity: 0.6;
+    color: black;
+  }
+}
+.projects {
+  padding: 0 120px;
+  &__title {
+    text-align: center;
+    margin: 60px 0 30px 0;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
+  }
+  &__img {
+    width: 240px;
+    height: 165px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.4); 
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 20px 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-border {
+      display: inline-block;
+      border: 1px solid #d3d3d3;
+      border-radius: 10px;
+    }
+  }
+}
+.contacts {
+  &__title {
+    text-align: center;
+    margin: 50px 0 30px 0;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  &__item {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1); 
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 50px;
+  padding-top: 6px;
+  background-color: #f07167;
+  height: 80px;
+  &__my {
+    font-size: 2.625rem;
+    font-family: 'Alex Brush', cursive;
+    color: #fff;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #f0f600;
+      }
+    }
+  }
+  &__github {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.03); 
+      }
+    }
+  }
+  &__year {
+    font-size: 1.375rem;
+    color: #fff;
+    letter-spacing: 2.2px;
+    margin-left: 30px;
+  }
+  &__rsschool {
+    width: 140px;
+    transition: transform 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.03); 
+      }
+    }
+  }
+  & .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .experience__wrapper,
+  .skills__wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .projects {
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 14px;
+  }
+  .about {
+    &__info {
+      & > * {
+        margin-left: 60px;
+      }
+    }
+    &__name {
+      margin-left: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    &__avatar {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    &__menu-list {
+      margin: 0 40px;
+    }
+  }
+  .about {
+    justify-content: start;
+    padding: 10px;
+    padding-top: 20px;
+    &__info {
+      margin: 0 5%;
+      & > * {
+        margin-left: 0;
+      }
+    }
+    &__name {
+      margin-left: 0;
+    }
+    &__avatar {
+      opacity: 0.5;
+      position: absolute;
+      right: 20px;
+    }
+  }
+  .experience {
+    &__title {
+      margin-top: 40px;
+    }
+  }
+  .skills {
+    &__wrapper {
+      margin-top: 40px;
+      row-gap: 40px;
+    }
+    &__code-example {
+      padding: 14px 50px;
+    }
+  }
+  .projects {
+    &__title {
+      margin-top: 40px;
+    }
+    &__img {
+      width: 215px;
+      height: 155px;
+    }
+  }
+  .footer {
+    &__github {
+      width: 60px;
+      height: 60px;
+    }
+    &__rsschool {
+      width: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 55px;
+    &__menu {
+      position: fixed;
+      top: 55px;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #f07167;
+      transition: right 0.6s ease;
+      overflow: auto;
+      z-index: 8;
+      &.active {
+        right: 0;
+      }
+    }
+    &__menu-list {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 40px;
+      padding: 10px 0;
+    }
+    & .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+    &__burger {
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 8px;
+      width: 44px;
+      height: 44px;
+      box-sizing: border-box;
+      z-index: 10;
+      & span {
+        width: 25px;
+        height: 2px;
+        border-radius: 100px;
+        background-color: #fff;
+        transition: all 0.5s ease;
+      }
+      &.active {
+        span:nth-of-type(1) {
+          position: relative;
+          top: 6px;
+          transform: rotate(45deg);
+        }
+        span:nth-of-type(2) {
+          position: relative;
+          top: -4px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .about {
+    &__avatar {
+      width: 250px;
+      height: 335px;
+    }
+  }
+  .footer {
+    height: auto;
+    &__github {
+      width: 50px;
+      height: 50px;
+    }
+    &__rsschool {
+      width: 98px;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  html {
+    font-size: 12px;
+  }
+  .about {
+    &__avatar {
+      width: 210px;
+      height: 270px;
+    }
+  }
+  .skills {
+    &__code-example {
+      padding: 14px 25px;
+    }
+  }
+  .footer {
+    &__github {
+      width: 45px;
+      height: 45px;
+    }
+    &__rsschool {
+      width: 90px;
+    }
+  }
+}
