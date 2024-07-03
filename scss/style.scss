@@ -34,8 +34,10 @@ body.lock {
       background-color: #fff;
       transition: width ease-in-out 0.3s;
     }
-    &:hover::before {
-      width: 10px; 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::before {
+        width: 10px; 
+      }
     }
     &::after {
       position: absolute;
@@ -47,11 +49,13 @@ body.lock {
       background-color: #fff;
       transition: width ease-in-out 0.3s;
     }
-    &:hover::after {
-      width: 10px; 
-    }
-    &:hover {
-      color: #f0f600;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::after {
+        width: 10px; 
+      }
+      &:hover {
+        color: #f0f600;
+      }
     }
   }
   &__burger {
@@ -153,6 +157,11 @@ body.lock {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 11%;
+    margin-top: 60px;
+    row-gap: 60px;
+  }
+  &__title {
+    margin-top: 0;
   }
   &__lang {
     padding: 0 10px;
@@ -173,7 +182,6 @@ body.lock {
     font-weight: bold;
   }
   &__code-example {
-    margin-top: 60px;
     padding: 20px 80px;
     font-size: 1rem;
     line-height: 22px;
@@ -200,8 +208,10 @@ body.lock {
     height: 165px;
     border-radius: 10px;
     transition: transform 0.5s ease;
-    &:hover {
-      transform: scale(1.4); 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.4); 
+      }
     }
   }
   &__item {
@@ -230,8 +240,10 @@ body.lock {
     width: 40px;
     height: 40px;
     transition: transform 0.3s ease;
-    &:hover {
-      transform: scale(1.1); 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1); 
+      }
     }
   }
 }
@@ -244,16 +256,20 @@ body.lock {
     font-size: 2.625rem;
     font-family: 'Alex Brush', cursive;
     color: #fff;
-    &:hover {
-      color: #f0f600;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #f0f600;
+      }
     }
   }
   &__github {
     width: 70px;
     height: 70px;
     transition: transform 0.3s ease;
-    &:hover {
-      transform: scale(1.03); 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.03); 
+      }
     }
   }
   &__year {
@@ -265,8 +281,10 @@ body.lock {
   &__rsschool {
     width: 140px;
     transition: transform 0.3s ease;
-    &:hover {
-      transform: scale(1.03); 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.03); 
+      }
     }
   }
   & .container {
@@ -346,14 +364,18 @@ body.lock {
     }
   }
   .skills {
-    &__title {
+    &__wrapper {
       margin-top: 40px;
+      row-gap: 40px;
     }
     &__code-example {
       padding: 14px 50px;
     }
   }
   .projects {
+    &__title {
+      margin-top: 40px;
+    }
     &__img {
       width: 215px;
       height: 155px;
@@ -429,6 +451,49 @@ body.lock {
           transform: rotate(-45deg);
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .about {
+    &__avatar {
+      width: 250px;
+      height: 335px;
+    }
+  }
+  .footer {
+    height: auto;
+    &__github {
+      width: 50px;
+      height: 50px;
+    }
+    &__rsschool {
+      width: 98px;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  html {
+    font-size: 12px;
+  }
+  .about {
+    &__avatar {
+      width: 210px;
+      height: 270px;
+    }
+  }
+  .skills {
+    &__code-example {
+      padding: 14px 25px;
+    }
+  }
+  .footer {
+    &__github {
+      width: 45px;
+      height: 45px;
+    }
+    &__rsschool {
+      width: 90px;
     }
   }
 }
