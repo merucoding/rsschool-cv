@@ -1,3 +1,3 @@
 # rsschool-cv
 
-## [my CV ✨](https://merucoding.github.io/nonograms/nonograms)
+## [my CV ✨](https://merucoding.github.io/rsschool-cv/)
